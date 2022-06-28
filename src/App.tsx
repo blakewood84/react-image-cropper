@@ -3,6 +3,8 @@ import "./App.css";
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 
+// TODO: Animated Gif and README.MD
+
 const App: React.FC = () => {
   const cropperRef = useRef<HTMLImageElement>(null);
   const [cropData, setCropData] = useState<string | null>(null);
