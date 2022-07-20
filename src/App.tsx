@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./App.css";
+import CSS from 'csstype';
+
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 import {
@@ -50,10 +52,16 @@ const App: React.FC = () => {
     cropImage();
     setEditBanner(false);
   };
+  const testStyle = {
+    border: "1px solid red",
+    width: "800px",
+    height: "auto",
+  } as React.CSSProperties;
 
   return (
     <div className="App">
-      <div className="nav-bar" style={navBarStyle}>
+      <img src={'/banner.jpeg'} style={testStyle} />
+      {/* <div className="nav-bar" style={navBarStyle}>
         <div className="nav-left" style={navLeftStyle}>
           <div style={navLogo}>Logo Here</div>
           <h5
@@ -126,7 +134,7 @@ const App: React.FC = () => {
         <div style={{ marginTop: "20px" }}>
           <h3>Main Content</h3>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
